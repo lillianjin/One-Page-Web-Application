@@ -40,11 +40,11 @@ function scroll_indicator() {
 
 function smooth(sec_top) {
     var start = window.pageYOffset,
-        target = sec_top + 80,
+        target = sec_top + 70,
         change = target - start,
         currentTime = 0,
         increment = 20,
-        duration = 1000;
+        duration = 600;
     var animateScroll = function(){
         currentTime += increment;
         var val = Math.easeInOutQuad(currentTime, start, change, duration);
@@ -57,11 +57,11 @@ function smooth(sec_top) {
 }
 
 
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d/2;
-  if (t < 1) return c/2*t*t + b;
-  t--;
-  return -c/2 * (t*(t-2) - 1) + b;
+Math.easeInOutQuad = function (time, start, change, duration) {
+  time /= duration/2;
+  if (time < 1) return change/2*time*time + start;
+  time--;
+  return -change/2 * (time*(time-2) - 1) + start;
 };
 
 var navs = document.getElementsByClassName("nav");
@@ -76,39 +76,42 @@ for (var i=0; i < navs.length; i++){
 }
 
 
-
-
 // carousel
 var container = document.getElementsByClassName('carousel-main')[0];
 var indicator = document.getElementsByClassName('carousel-indicator')[0];
 var pts = [].slice.call(document.getElementsByClassName('carousel-pt'));
 var total = document.getElementsByClassName('carousel-item').length;
 var percent = (100 / total);
-var currentIndex = 0;
-pts[currentIndex].classList.add('active');
+var curIdx = 0;
+pts[curIdx].classList.add('active');
 
-function slideTo(index) {
-    index = index < 0 ? total - 1 : index >= total ? 0 : index;
+function changeImg(index) {
+    if (index < 0){
+        index = total - 1;
+    }
+    if (index >= total){
+        index = 0;
+    }
     container.style.WebkitTransform = container.style.transform = 'translateX(-' + (index * percent) + '%)';
-    pts[currentIndex].classList.remove('active');
+    pts[curIdx].classList.remove('active');
     pts[index].classList.add('active');
-    currentIndex = index;
+    curIdx = index;
 }
 
 var prevBtn = document.getElementById('carousel-prev');
 prevBtn.onclick = function() {
-    slideTo(currentIndex - 1);
+    changeImg(curIdx - 1);
 }
 
 var nextBtn = document.getElementById('carousel-next');
 nextBtn.onclick = function() {
-    slideTo(currentIndex + 1);
+    changeImg(curIdx + 1);
 }
 
 indicator.onclick = function(curr) {
     var index = pts.indexOf(curr.target);
-    if (index !== -1 && index !== currentIndex) {
-        slideTo(index);
+    if (index !== -1 && index !== curIdx) {
+        changeImg(index);
     }
 }
 

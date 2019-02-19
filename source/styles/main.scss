@@ -14,7 +14,7 @@ body {
     font-size: 1em;
     color: #fcfff5;
     line-height: 1.5;
-    background-image: url(assets/coffee.jpg);
+    background-color: black;
 }
 
 header {
@@ -56,7 +56,7 @@ header {
     // display: inline-block;
     // overflow: scroll;
     position: absolute;
-    // width: 20em;
+    width: 100%;
     top: 100%;
     // left: 50%;
     transform: translate(0, -100%);
@@ -111,6 +111,7 @@ header {
 
 #main {
     position: relative;
+    width: 100%;
     top: 4.375em;
     display: flex;
     flex-direction: column;
@@ -269,7 +270,6 @@ header {
     display: flex;
     position: relative;
     padding: 0 1% 0 1%;
-    width: 100%;
     height: 80%;
 }
 
@@ -384,11 +384,9 @@ header {
 #section3 {
     position: relative;
     height: 35em;
-    width: 100%;
     text-align: justify;
     // bottom: 4em;
     padding-left: 2em;
-    padding-right: 2em;
     // background-color: #a96851;
 }
 
@@ -460,6 +458,25 @@ footer {
     margin-right: 1em;
 }
 
+#icon1:visited,
+#icon2:visited,
+#icon3:visited,
+#icon4:visited,
+#icon1:active,
+#icon2:active,
+#icon3:active,
+#icon4:active {
+    color: blue;
+}
+
+#icon1:hover,
+#icon2:hover,
+#icon3:hover,
+#icon4:hover {
+    color: white;
+}
+
+
 .address {
     position: relative;
     left: 20%;
@@ -469,12 +486,3 @@ footer {
     margin: 0.8em;
     text-align: left;
 }
-//
-// .copyright {
-//     position: relative;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     width: 40%;
-//     height: 15%;
-//     float: left;
-// }
