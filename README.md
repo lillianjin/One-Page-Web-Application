@@ -2,7 +2,7 @@
 ## Deployed Link
 https://lillianjin.github.io/498_mp1/
 
-#### Requirements
+## Requirements
 
 Your webpage will have to implement the features listed below. Note that the examples are only meant to illustrate the features. You do not have to make you webpage look similar to the examples. You just have to incorporate that feature in some form.
 
