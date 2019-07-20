@@ -1,18 +1,6 @@
 # MP #1: One Web Page To Rule Them All
-### Due: Feb 18, 11.59PM CDT
-
-## Table of Contents
-1. [Assignment](#assignment)
-2. [Grading Breakdown](#grading-breakdown)
-3. [Rules](#rules)
-4. [Environment Setup Guide](#environment-setup-guide)
-5. [Submission Details](#submission-details)
-
-## Assignment
-
-#### Task
-
-In this programming assignment, you will design and implement a single-page website with specified functionality and formatting using only HTML, SCSS, and Javascript. The content of the website is up to you. For example, the subject can be a company/organization, a product, or a personal/portfolio page. This assignment will give you first-hand experience with HTML5 (e.g. header, canvas, video), CSS3/SASS (e.g. use of webfonts, animations, layout), and Javascript(ES5 or ES6).
+## Deployed Link
+https://lillianjin.github.io/498_mp1/
 
 #### Requirements
 
@@ -37,52 +25,3 @@ Your webpage will have to implement the features listed below. Note that the exa
 13. CSS3 Animations: At least one use of CSS3 animations (e.g. fade in/out, transitions)
 14. At least one use of scalable vector icons through CSS (e.g. FontAwesome)
 15. Inclusion of social media icons
-
-## Grading Breakdown
-
-- Layout and Overall Design - 20%
-- Code (follows HTML5, SASS/SCSS, ES5 or ES6 best practices) - 13%
-- Smooth Scrolling - 10%
-- Carousel - 10%
-- Modal - 10%
-- Responsiveness - 10%
-- Position Indicator - 5%
-- Navbar Resizing - 5%
-- Multi-column layout - 5%
-- CSS3 Animations - 5%
-- Centering - 2%
-- Video - 2%
-- Sticky Navbar - 1%
-- Background Image - 1%
-- Scalable vector icons and inclusion of social media icons - 1%
-
-## Rules
-1. This is an individual assignment. No collaboration is permitted.
-2. It is not permitted to copy/paste code that is not your own. You are, however, free to look at different code sources for inspiration and clarity. All sources (code as well as reading material) that you reference to complete this assignment must be declared in the submission.
-3. No libraries are permitted.
-4. There should be no use of inline styling.
-5. No inline script tags should be used.
-6. HTML tables cannot be used for layout.
-7. If you think something you’re doing might not be acceptable, please ask on Piazza.
-8. You must utilize some SCSS features (variables, mixins, etc). A plain CSS file will receive less points.
-
-## Environment Setup Guide
-1. Clone the repository:
-`git clone https://github.com/uiuc-web-programming/mp1_starter.git mp1`, then `cd mp1`
-2. Install dependencies:
-`npm install` or `npm i`
-3. Run the dev server:
-`npm run dev`
-4. Open a browser and go to `http://localhost:8080/` to view your page. You should see "Welcome to MP1!" at the top of the screen. Note that if for some reason your port 8080 is occupied, it will default to 8081.
-
-## Submission Details
-Here's what you will need to submit:
-
-1. Create a private repository on GitHub. Make sure "Initialize this repository with a README" is not checked.
-2. Change the remote url for the mp1 directory to the url of the new private repository you created. [Guide](https://help.github.com/articles/changing-a-remote-s-url/)
-3. Push your local changes to the new repository. (`git push -u origin master`)
-4. Add "UIUCWP-Bot" as a collaborator to your private repository. [Guide](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
-5. Run `npm run deploy` to deploy your application using GitHub Pages.
-6. After deploy finishes; you should see your deployed application on `<username>.github.io/<repo>`.
-
-To finish your submission, fill out the form [here](https://uiucwp.typeform.com/to/n5lSFL).
